@@ -68,7 +68,6 @@ license you like.
 // End of content of file: LICENSE
 // //////////////////////////////////////////////////////////////////////
 
-
 #ifndef JSON_AMALGATED_H_INCLUDED
 # define JSON_AMALGATED_H_INCLUDED
 /// If defined, indicates that the source file is amalgated
@@ -112,7 +111,7 @@ license you like.
 /// If defined, indicates that the source file is amalgated
 /// to prevent private header inclusion.
 /// Remarks: it is automatically defined in the generated amalgated header.
-// #define JSON_IS_AMALGAMATION
+#define JSON_IS_AMALGAMATION 1
 
 
 # ifdef JSON_IN_CPPTL

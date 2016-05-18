@@ -14,7 +14,6 @@ INCLUDE_DIRECTORIES(
 )
 
 set(IOTAPI_HEADERS 
-    ${JSONCPP_HDRS}
     IOT_WriteData.h
     IOT_ReadData.h
     IOT_ReadDataFilter.h
@@ -68,7 +67,8 @@ if(BUILD_DEMO)
         ARCHIVE DESTINATION lib)
 endif()
 
-
+    
+install(FILES ${JSONCPP_HDRS} DESTINATION include/json)
 install(FILES ${IOTAPI_HEADERS} DESTINATION include/IOT_API)
 
 configure_file(FindIOT_API.cmake.in ${CMAKE_CURRENT_BINARY_DIR}/FindIOT_API.cmake @ONLY)
