@@ -78,7 +78,7 @@ bool IOT_ReadData::GetConvertedValue(size_t index, long& value) const
     std::stringstream ss(m_processData.at(index).second);
     ss >> value;
 
-    return ss;
+    return value;
 }
 
 bool IOT_ReadData::GetConvertedValue(size_t index, double& value) const
@@ -89,7 +89,7 @@ bool IOT_ReadData::GetConvertedValue(size_t index, double& value) const
     std::stringstream ss(m_processData.at(index).second);
     ss >> value;
 
-    return ss;
+    return value;
 }
 
 bool IOT_ReadData::GetConvertedValue(size_t index, bool& value) const

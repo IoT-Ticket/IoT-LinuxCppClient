@@ -19,13 +19,13 @@ This project does not build the libcurl and it needs to be installed before buil
 The library project uses CMake. To build the library for the host system, following commands can be issued from the project root directory:
 ```sh
 $ cmake iot-ticket-client
-$ make 
+$ make
 ```
 
 These commands build the shared library. Additionally tests and a demo application can be built. The tests and demo application use features from C++11 standard which needs to be enabled by providing a compiler flag. For older compilers the correct flag might be "-std=c\+\+0x"
 ```sh
-$ cmake -DBUILD_TESTS=1 -DBUILD_DEMO=1 -DCMAKE_CXX_FLAGS="-std=c++11" iot-ticket-client
-$ make 
+$ cmake -DBUILD_TESTS=1 -DBUILD_DEMO=1 -DCMAKE_CXX_FLAGS="-std=c++11 -lpthread" iot-ticket-client
+$ make
 ```
 
 ### Example code
